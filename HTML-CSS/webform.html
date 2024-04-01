@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Payment Form</title>
+    </head>
+<body>
+    <form action="">
+    <!-- form tag is used to create a form. In 'action', we mention the server location. 
+         Here we have not created a server so we have not mention it-->
+    <h1>Payment form</h1>
+    <p> Required field are followed by * </p>
+    <h2>Contact Information</h2>
+    <p>Name:* <input type="text" name="name" size="80" required></p>
+    <!-- input type="text" is used to create a blank text box to take text input from user. 
+        'name' attribute is used here to store the entered name in the server.-->
+    <!-- 'required' se ek particular blank text box ko fill karna compulsory ho jaata hai. -->
+     <!-- size is used to increase or decrease the size of the text box horizontally. This size attribute works only when input type="text".-->
+    <p>Gender*</p>
+    <fieldset>
+        <p>
+         Male <input type="radio" name="gender" required id="male">
+         <br>
+         Female <input type="radio" name="gender" required id="female">
+        </p>
+    </fieldset>
+        <!-- radio is used to create options out of which only one can be chosen. 
+             Male and Female dono ka 'name' attribute different hona chahiye varna dono select karne par dono hi select honge.
+             'name' attribute different hone par ek option select karo to doosra select nahi hoga.
+             id attribute dono Male or Female ka different bhi ho sakta hai or same bhi ho sakta hai, no issue. --> 
+        <!-- fieldset is used to create a box around the paragraph tag <p>-->
+    <p> Address: <textarea name="address" id="address" cols="100" rows="8"></textarea></p>
+    <!-- textarea is used to create a blank box whose size can be altered in x as well as y axis.-->
+    <p> Email:* <input type="email" name="email" required id="email"> </p>
+    <p> Pincode:* <input type="number" name="pincode" required id="pincode" pattern=".{6}" title="6 digits required"> </p>
+    <!-- pattern attribute helps in limiting the value of a given input type. For eg - here ".{6}" means that only six digits can be entered in this input number type.
+         title attribute is used to display the value limit to the user through a notification box.-->
+    <!-- Basically ye name or id attributes formality ke liye hai. jonsa bhi paragraph tag me main heading hoga like 'Pincode:' usi ko lowercase me likhdo name or id me. -->
+    <h2> Payment Information </h2>
+    <p> Card Type:* 
+        <select name="card_type" id="card_type" required>
+            <option value="">--Select a Card Type--</option>
+            <option value="visa">Visa</option>
+            <option value="rupay">Rupay</option>
+            <option value="mastercard">Mastercard</option>
+        </select>
+        <!-- select tag is used to create a selection tab and option tag is used to create options inside selection tab .
+             Here we have taken the 1st option's value as empty because 
+             agar ham uski koi value set kar denge, to saara form fill karke submit karne par server pe vo value store ho jaayegi 
+             or fir vo form jab koi or user kholega to usko vo vaali value show hogi instead of 'Select a Card Type' option.
+             Here value taken as visa will store the value visa in the server and Visa written between 'option' tag is used to diplay Visa on the screen. -->
+    </p>
+    <p>
+        Card Number* <input type="number" name="card-number" id="card-number" required>
+    </p>
+    <p>
+        Expiry Date* <input type="date" name="exp-date" id="exp-date" required>
+    </p>
+    <p>
+        CVV* <input type="password" name="cvv" id="cvv" required>
+    </p>
+    <input type="submit" value="Pay Now">
+    </form>
+</body>
+</html>

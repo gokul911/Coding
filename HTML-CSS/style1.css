@@ -1,0 +1,158 @@
+/*SYNTAX OF CSS:- It consists of a 'Property : Value' pair.
+Values can be user defined or pre defined.
+Property can be anything like color, text-align, font-family.
+*/
+
+/*Type selector
+
+h3{
+    color: blue;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 300%;
+}
+font family is used to give font.*/
+
+/*Combined selector
+
+h4,h5,p{
+    color: blueviolet;
+}*/
+
+/*Class selector :- kisi bhi para ya heading tag ke aage class attribute use karke uska 
+koi ek naam dedo us class attribute ko or '.' ke saath use call karke, curly brackets ke 
+andar 'property:value' likh lo(property here means color and value here means cadetblue here).
+
+.apna{
+    border:5px solid rgb(230, 176, 225);
+    padding: 30px;
+    margin: 100px;
+}*/
+/*border is used to give border to the mentioned html element.
+padding is used to create space inside the border. 
+margin is used to create space outside the border.*/
+
+/*Id selector :- ye class selector jaisa hi hai, bas . ki jaga # use 
+karo along with the id of the element to be selected.
+
+#kak{
+    color: chartreuse;
+}*/
+
+/*Attribute selector :- ye tab use karte hain jab hame ek attribute ko 
+select karna hota hai along with the element.
+SYNTAX :- pehle tag name likho(like 'li' here), fir square brackets me attribute likho ya attribute 
+along with its name likho(like li[id] or li[id="ab"] here).
+
+li[id]{
+    color: rgb(18, 17, 17);
+    font-size: 300%;
+}*/
+
+/*Pseudo Class selector :- isko ham element ke alag alag states ko style karne ke liye use karte hain.
+Bohot se states hote hain elements ki like hover,visted etc.
+Jab ham kisi website me kisi text ke uper cursor laate hain, to uska state change ho jaata hai
+(like uska colour change ho jaana etc), isko ham hover state kehte hain.
+Jab ham kisi link par click karte hain mouse se, to uska state change ho
+jaata hai(like blue se violet color ka ho jaana), isko visited state kehte hain.
+SYNTAX :- pehle element name ya element id/class likho, then colon use karo and 
+then mention the state name like hover,visited etc.
+
+#kak:hover{
+    color: blue;
+}*/
+
+/*Pseudo element selector :- used to select any part of a given element. 
+Element here refers to any para or heading. 
+SYNTAX :- firstly write the para tag or mention its id/class and then 
+put '::' and select any part of the text.
+Is selector ke through ham ek parent element ke child element(sub element) 
+ko bhi select kar sakte hain.
+
+.lor::first-line{
+    color:white;
+}*/
+
+/*Combinator selector :- Isme ham ek element ko uske child 
+ke saath select kar sakte hain.
+like :- We have used an article tag and it includes various tags like 
+heading, paragraph, div, span etc., which are its child. ab hame suppose 
+p tag select karna hai article tag me se.
+So SYNTAX will be :- pehle parent tag ka naam, fir arrow and then child ka naam.
+
+article>div{
+    color: rgb(0, 132, 255);
+}*/
+
+/*Universal selector :- Jab hame ek html document ke saare elements select karne ho, 
+tab ham isko use karte hain.
+SYNTAX :- pehle * likho, then curly braces me property-value pair.
+
+*{
+    color: black;
+}*/
+
+li{
+    list-style-type:  decimal ;
+}
+/*list-style-type is used to change the bullet type of the list*/
+
+/*Agar ek se jyaada element ko same class name de rakha ho, lekin unme se sirf 
+ek hi element ya kuch ginne chune elements ko select karna ho, to follow the below syntax.*/
+
+span.special{
+    color:orchid;
+    font-weight: 900;
+}
+
+p.special,li.special{
+    color:orange;
+    font-weight: bolder;
+}
+
+/*Descendant Combinator selector :- isme ham ek type ke element ke 
+neeche doosre type ka element select kar sakte hain.*/
+
+li em{
+    color: brown;
+}
+
+/*Adjacent Combinator selector :- is se hame given element ka next element mil jaayega.
+SYNTAX :- pehle element ka naam, then use + sign, then agle element ka naam.
++ ke baad vaala element, + ke pehle vaale element ke bilkul next line pe hona chahiye, 
+otherwise this selector won't work*/
+
+h1+p{
+    color: blueviolet;
+}
+
+a:hover{
+    color: chartreuse;
+    text-decoration: none;
+}
+/*text-decoration ko none karne se text ka underline hat jaayega.*/
+
+/*The below given combinator selector will select the tag with class 
+name as "special", inside the paragraph tag adjacent to h1 tag, which is further inside the body tag.*/
+
+body h1+p .special{
+    color: yellow;
+    background-color: black;
+    padding: 5px;
+}
+
+/*Here, in all the above given commands, we can also use id selectors instead of class slectors by 
+simply writing '#idname' instead of '.classname'*/
+
+li[class="a"]{
+    color: chartreuse;
+    font-size: 300%;
+}
+
+li[class~="b"]{
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+/*yaha pe class~="b" ka matlab hai ki ye vo saare elements select karega jisme class 
+attribute name me 'b' aa rha hai. Agar kisi class attribute name me 'b' or kisi or 
+aplhabet ke beech me space ho, to ye usko bhi select kar lega*/

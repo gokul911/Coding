@@ -1,0 +1,105 @@
+/*DIFFERENT TYPES OF PROPERTIES IN CSS:-
+
+1)color : used to give color to the text.
+
+2)background color : used to give color to the background.
+
+3)border-color : used to give color to the border.
+
+4)background-image : used to display an image in the background.
+  SYNTAX : We'll use "url()" function and then we need to move the required image into the file in which html document is placed and then write the name 
+  of the image  inside the circular brackets of the url() function. 
+
+5)background repeat : is se x axis ya y axis me image repeat hota jaayega.
+  SYNTAX :Write "background repeat:repeat-y" to repeat the image along y-axis and write "repeat-x" instead of "repeat-y" to repeat the image in x axis.
+  To remove repeatation of image(by deafult repeatation of image occurs in all directions when one uses the background-image property), 
+  "background repeat:no-repeat" can be used.
+
+6)background-size : used to give the size of the image.(height and width are used to give 
+  the size/space to be occupied by the element[like "div", given below] in which image is to be placed[image ka size nahi dete height or width se].
+  The background-size must be less than or equal to height/width, otherwise the image will get cropped and it will not be the same as before.)
+
+7)background-position : used to specify the position of the background.
+
+8)background-attachment : is se background image fixed ya scroll me convert ho jaati hai.
+  fixed means background me image fixed rhega, bas content move karega or scroll means background image content ke saath move karegi scroll karne par.
+*/
+
+h1{
+    color: yellow;
+    background-color: orange;
+    height: 40px;
+    width: 200px;
+}
+
+div{
+    background-image: url(naruto.jpg);
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-attachment: fixed;
+    background-position: top;
+    height: 1000px;
+    width: 1000px;
+}
+
+/*FONTS IN CSS:-
+
+9)font-family : used to define the font of the text like calibri,times etc.
+  You can also use fonts that are available online through google.
+  To do so, firstly search 'google fonts '--> then select your favourite font --> click on 'Select Regular' option --> then copy the link and 
+  paste it in the html document --> now write the font name(that you have selected online from google fonts) in front of 'font-family' property in the css file.
+  Jaha pe css file link kiya hoga, uske uper hi is online font ka link paste karna, taaki vo font link css file se pehle load ho jaaye or css file 
+  ko pata chal sake ki aisa font exist karta hai ya nhi. 
+
+10)font-style : used to give style to the text like oblique,italics etc.
+
+11)font-size : used to specify the size of the text.
+
+12)font-weight : used to specify how much bolder or lighter thhe text should be.
+*/
+
+h2{
+  font-size: larger;
+  font-family: Bruno Ace SC;
+  font-style: italic;
+  font-weight: 1000;
+}
+
+/*FORMATTING TEXT WITH CSS:-
+
+13)text-align : used to align the text like left, right, center, justify etc.
+
+14)text-decoration : is se ham overline, underline, line-through jaisi cheeze text pe laga sakte hain.
+
+15)text-transform : is se ham kisi bhi text ko uppercase, lowercase, capitalize(kisi bhi text ke pehle alphabet ko uppercase me convert karna) vagera kar sakte hain.
+
+16)text-indent : used to indent the text according to the mentioned size.
+
+17)letter-spacing : used to give spacing required between the letters according to the mentioned size.
+
+18)word-spacing :  used to give spacing between the words according to the mentioned size.
+
+19)line-height : used to give spacing between different lines in a paragraph.
+
+20)text-shadow : used to give a 3D look to the text by applying shadow to the text.
+   SYNTAX :- firstly mention ki kitna distance x-axis se hona chahiye shadow ka, fir y-axis se distance mention karo, fir mention karo ki kitna blurred hona chahiye shadow 
+   and then mention the shadow color.
+   Is property ke through ham 2 shadow bhi daal sakte hain ek hi text par(as shown below).
+*/
+
+.naruto{
+  color: red;
+  line-height: 1.5;
+  font-weight: 900;
+  text-indent: 100px;
+  word-spacing: 10px;
+  letter-spacing: 4px;
+}
+
+.shadow{
+  color:red;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 4px 4px 3px red,4px 4px 3px red;
+  text-align: center;
+}

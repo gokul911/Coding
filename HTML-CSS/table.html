@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Table</title>
+    <style>
+        table{
+            border: 1px solid black;
+            font-size: 200%;
+            border-collapse: collapse; /*to remove extra space between rows and columns.*/
+        }
+        td,th{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Theory</th>
+                <th>Practical</th>
+                <th>Total Marks</th>
+                <th>Grades</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>English</td>
+                <td>75</td>
+                <td>_</td>
+                <td>77</td>
+                <td>78</td>
+            </tr>
+            <tr>
+                <td>Hindi</td>
+                <td>75</td>
+                <td>_</td>
+                <td>77</td>
+                <td>78</td>
+            </tr>
+            <tr>
+                <td>Science</td>
+                <td>75</td>
+                <td>_</td>
+                <td>77</td>
+                <td>78</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <th colspan="5">Result:Pass</th>
+        </tfoot>
+    </table>
+    <!-- table tag is used to create a table.
+        In a table, horizontal lines are rows and vertical ones are columns.
+        'tr' tag stands for table rows and 'td' stands for table data means in td tag we write the content to be displayed inside a cell of a table.
+        'th' stands for table heading. The content written inside this 'th' tag gets highlighted by default.-->
+     <!-- rowspan and colspan are attributes used in 'th' and 'td' tag respectively to merge mentioned number of rows and columns respectively.
+          for example :- In the above given table, colspan="5" means that 5 columns will be merged into one and then 'Result:Pass' will be displayed.-->
+     <!-- STRUCTURE OF A TABLE :-
+        'thead' tag is used to mention all the headings of the table together using seperate 'th' tag inside this 'thead' tag.
+        'tbody' tag is used to mention all the data/content of the table, along the row of the table, all together using seperate 'th'/'td' tag inside this 'tbody' tag.
+        'tfoot' tag is used to mention the last/footer part of the table.
+        Ham thead,tbody,tfoot tags ke bina bhi table create kar sakte hain but aise tags use karne ka reason ye hai ki is se hame table ka structure clearly html document 
+        me dikh rha hai jaise ki table ka heading part, body or footer part kaha kaha hai. ->
+</body>
+</html>
